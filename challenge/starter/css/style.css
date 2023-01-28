@@ -1,0 +1,414 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior:smooth ;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  line-height: 1.5;
+  background-color: bisque;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+nav{
+  display: flex;
+  margin-right: 70px;
+}
+
+/* Adding styling to flex items 'nav' elements */
+.flex_item{
+  background-color:bisque ;
+  font-size: 24px;
+  padding: 10px;
+  
+}
+
+
+/* HEADER */
+header{
+  background-color: antiquewhite;
+  height: 90px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* header h1 styling */
+
+header h1{
+  height: 60px;
+  padding-top: 10px;
+  margin-right: 10px;
+  width: 350px;
+}
+
+
+/* BANNER */
+
+/* Adding background image to hero banner */
+.hero-banner{
+  background-image:-moz-radial-gradient()
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-bottom: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-banner h3{
+  color:aliceblue
+  height: 40px;
+  width: 250px;
+}
+
+.image-overlay{
+  width: 100%;
+  height: 180px;
+  background-color: rgba(53, 164, 204, 0.4);
+}
+
+
+.subtitle{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content:end;
+  padding: 25px;
+}
+
+
+/* Initializing category grid */
+main{
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 150vh;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 17% 83%;
+  grid-template-areas: 
+  "about about-info"
+  "work  work-info"
+  "contact  contact-info"
+  ;
+  padding: 10px;
+}
+
+/* Main header2 styling */
+main h2{
+  font-size: 35px;
+  width: 150px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+main a{
+  color:black
+}
+
+/* Initializing grid sections elements */
+#about{
+  grid-area: about;
+}
+#about-info{
+  grid-area: about-info;
+  padding: 10px;
+  font-size: 22px;
+}
+#about,
+#work,
+#contact{
+  padding-left: 28px;
+  padding-top: 20px;
+  margin: 10px;
+}
+#work{
+  grid-area: work;
+}
+#work-info{
+  grid-area: work-info;
+}
+
+/* NESTED GRID - PROJECTS */
+/* Grid for work examples */
+#work-grid{
+  display: grid;
+  min-height: 500px;
+  height: 90vh;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "port1 port1" 
+  "port1 port1"
+  "port2 port3"
+  "port4 runbuddy"
+  ;
+  padding-left: 60px;
+}
+
+/* PORTFOLIO IMAGES */
+/* Initializing work grid elements & adding photos */
+#port1{
+  grid-area: port1;
+  background-image: url("../images/cashbuddy.jpeg");
+  border: 2px solid 
+}
+#port2{
+  grid-area: port2;
+  background-image: url("../images/02-portfolio-1.jpg");
+  border: 2px solid 
+}
+#port3{
+  grid-area: port3;
+  background-image: url("../images/02-portfolio-3.jpg");
+  border: 2px solid 
+}
+#port4{
+  grid-area: port4;
+  background-image: url("../images/02-portfolio-4.jpg");
+  border: 2px solid 
+}
+#runbuddy{
+  grid-area: runbuddy;
+  background-image: url("../images/02-run-buddy.jpg");
+  border: 2px solid 
+}
+
+.portfolioGridArea{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  display: grid;
+  align-content: end;
+}
+
+#port1:hover,
+#port2:hover,
+#port3:hover,
+#port4:hover,
+#runbuddy:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+#port1,
+#port2,
+#port3,
+#port4,
+#runbuddy{
+  transition-duration: 0.3s;
+
+}
+
+#contact{
+  grid-area: contact;
+}
+
+/* Headers for writing on top of portfolio images */
+.work_heading{
+ 
+  width: 160px;
+  padding: 15px;
+  margin-bottom: 20px;
+  height: 40px;
+  color: var(--primary);
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTACT */
+
+/* Add color for links in contact section */
+#contact a{
+  color:blanchedalmond
+}
+
+
+/* Contact Info */
+#contact-info{
+  grid-area: contact-info;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  font-size: 30px;
+}
+
+/* MEDIA QUERIES */
+/* Adding responsiveness - resizing based on screen sizes */
+/* largest size 980+ */
+/* mid size 770-979px */
+/* small size 0-769px */
+
+/* MEDIUM SIZED SCREEN */
+@media only screen and (min-width:770px) and (max-width:979px) {
+
+  header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header h1{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 40px;
+  }
+
+  #about,
+  #work,
+  #contact{
+    border-right:0px;
+    padding-left: 28px;
+    padding-top: 20px;
+    margin: 10px;
+}
+
+  nav{
+    width: 100%;
+    position: relative;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main{
+    margin: 0px 5%;
+    display: grid;
+    min-height: 500px;
+    height: 150vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 17% 83%;
+    grid-template-areas: 
+    "about about"
+    "about-info  about-info"
+    "work work"
+    "work-info work-info"
+    "contact contact"
+    "contact-info contact-info"
+    ;
+    padding: 10px;
+  }
+
+  .subtitle {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+  }
+}
+
+
+/* SMALL SIZE SCREEN */
+
+@media only screen and (max-width:770px) {
+  header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header h1{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 40px;
+  }
+
+  #about,
+  #work,
+  #contact{
+    border-right:0px;
+    padding-left: 28px;
+    padding-top: 20px;
+    margin: 10px;
+}
+
+  nav{
+    width: 100%;
+    position: relative;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main{
+    margin: 0px 5%;
+    display: grid;
+    min-height: 500px;
+    height: 150vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 17% 83%;
+    grid-template-areas: 
+    "about about"
+    "about-info  about-info"
+    "work work"
+    "work-info work-info"
+    "contact contact"
+    "contact-info contact-info"
+    ;
+    padding: 10px;
+  }
+
+  .hero-banner h2{
+   align-items: center;
+   justify-content: end;
+  }
+
+  #work-grid{
+    display: grid;
+    min-height: 500px;
+    height: 90vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "port1"
+    "port2"
+    "port3"
+    "port4"
+    "runbuddy"
+    ;
+    padding-left: 60px;
+  }
+
+  #contact-info{
+    justify-content:space-around
+  }
+
+
+
+
+
+}

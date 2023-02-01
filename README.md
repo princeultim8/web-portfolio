@@ -1,9 +1,9 @@
 # Web Portfolio
 
 ## Description
-A professional portfolio that displays name, works and comtact details.
+A professional portfolio that displays name, works and contact details.
 This portfolio was made using responsive web development tools.
-All works here are placeholders given as a template to work with, sotherefore, the links are not active.
+All works here are placeholders given as a template to work with, so therefore, the links are not active.
 
 
 ## Installations
